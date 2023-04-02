@@ -1,30 +1,29 @@
 import React from "react";
 
 import "./Footer.css";
-import evangadiLogo from "../../CommonResources/evanLogo.jpeg";
 import { Link } from "react-router-dom";
-
+import logo from '../../image/evangadi-logo-footer.png'
 function Footer() {
   return (
-    <div className="footer d-lg-flex d-md-flex d-sm-block  ">
+    <div className="footer d-lg-flex">
       <div className="footer__left mx-sm-5 ">
         <div className="footer__logo">
-          <img src={evangadiLogo} alt="" />
+          <img src={logo} alt="" />
         </div>
         <div className="footer__socialMedias col-sm-12">
-          <div className="footer__facebook">
+          <div className="footer__facebook mx-2">
             <Link to="https://www.facebook.com/EthiopiansNetwork">
-              <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-facebook"></i>
             </Link>
           </div>
-          <div className="footer__instagram">
+          <div className="footer__instagram mx-3">
             <Link to="https://www.instagram.com/evangaditech/">
-              <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-instagram"></i>
             </Link>
           </div>
           <div className="footer__youtube">
             <Link to="https://www.youtube.com/c/weareethiopians">
-              <i class="fa-brands fa-youtube"></i>
+            <i class="fa-brands fa-youtube"></i>
             </Link>
           </div>
         </div>

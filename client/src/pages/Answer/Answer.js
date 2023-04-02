@@ -71,75 +71,18 @@ function Answer() {
   //   window.location.href = '/';
   // }  
 
-  // if(answer.length == 0) navigate('/');
   return (
-    // <div className="answer">
-    //   <h3 style={{ fontSize: "18px", fontWeight: "500" }}>Question</h3>
-    //   <h5 style={{ marginTop: "-15px", fontSize: "15px" }}>{post?.question}</h5>
-    //   <p style={{ marginTop: "-15px", fontSize: "12px" }}>
-    //     {post?.question_description}
-    //   </p>
-    //   <hr />
-    //   <h3>Answer From The Community</h3>
-    //   <hr />
-    //   {answer &&
-    //     answer?.map((item) => (
-    //       <div>
-    //         <div className="answer__info">
-    //           <div>
-    //             <AccountCircleTwoToneIcon style={{ fontSize: "60px" }} />
-    //             <p style={{ marginTop: "-10px", fontSize: "13px" }}>
-    //               {item.user_name}
-    //             </p>
-    //           </div>
-
-    //           <p style={{ paddingLeft: "20px" }}>{item.answer}</p>
-    //         </div>
-    //         <hr />
-    //       </div>
-    //     ))}
-
-    //   <div className="answer__write">
-    //     <h2>Answer The Top Questions</h2>
-    //     <div className="question__link">
-    //       <Link to="/home"> Go to question page</Link>
-    //     </div>
-    //     <br />
-    //   </div>
-
-    //   <form onSubmit={handleSubmit}>
-    //     <textarea
-    //       style={{
-    //         borderRadius: "8px",
-    //         border: "1px solid gray",
-    //       }}
-    //       name="answer"
-    //       id=""
-    //       cols="110"
-    //       rows="10"
-    //       placeholder="Your Answer here"
-    //       value={form.answer}
-    //       onChange={handleChange}
-    //     ></textarea>
-    //     <br />
-    //     <br />
-    //     <div className="answer__button">
-    //       {" "}
-    //       <button style={{ marginTop: "-15px" }}>Post Your Answer</button>
-    //     </div>
-    //   </form>
-    // </div>
-
     <div className="answer">
       <hr />
       <div className="answer__conatiner">
-        <h5> Question</h5>
+        <h3> Question</h3>
+
         <h5 className="question__line mb-3">{post?.question}</h5>
-        <p style={{ marginTop: "-15px", fontSize: "10px" }}>
+        <p >
           {post?.question_description}
         </p>
         <hr />
-        <h5 className="answer__community">Answer From The Community</h5>
+        <h3 className="answer__community">Answer From The Community</h3>
         <hr />
         {answer &&
           answer?.map((item) => (
@@ -148,8 +91,8 @@ function Answer() {
                 <div className="question__icon">
                   <div className="icon">
                     <span>
-                      <AccountCircleTwoToneIcon style={{ fontSize: "60px" }} />
-                      <p className="mx-3"> {item.user_name}</p>
+                      <AccountCircleTwoToneIcon style={{ fontSize: "45px" }} />
+                      <p className="mx-3" style={{fontSize: "14px" }}> {item.user_name}</p>
                     </span>
                   </div>
                   <div className="answer__desc mt-4">{item.answer}</div>
@@ -161,8 +104,8 @@ function Answer() {
         <div className="answer__box ">
           <div className="answer__topQuestion">Answer The Top Questions</div>
 
-          <div className="answer__link link mb-1 ">
-            <Link to="/"> Go to question page</Link>
+          <div className="answer__link  mt-2 ">
+            <Link to="/" > Go to question page</Link>
           </div>
           <br />
 

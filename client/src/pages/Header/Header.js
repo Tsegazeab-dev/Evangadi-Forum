@@ -1,11 +1,12 @@
 import React, { useContext } from "react";
-import "./HeaderCustom"
 import "./Header.css"
 import { Link } from "react-router-dom";
 import { UserContext } from "../../context/UserContext";
-// import "./Header.css";
-import evangadiLogo from "../../CommonResources/evanLogo.jpeg"
-
+import "./Header.css";
+import logo from '../../image/evangadi-logo-home.png'
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import Container from 'react-bootstrap/Container'
 const Header = ({logout}) => {
   const [userData, setUserData] = useContext(UserContext);
 
@@ -16,53 +17,40 @@ const Header = ({logout}) => {
   // };
 
   return (
-    // <div className="nav">
-    //   <Link to="/">
-    //   <img
-    //     className="nav__image"
-    //     src="https://www.evangadi.com/themes/humans//assets/images/misc/evangadi-logo-home.png"
-    //     alt=""
-    //   />
-    //   </Link>
-
-    //     <Link to={!userData.user && "/login"} className="link">
-    //   <div className="nav__bar">
-    //     <span>Home</span>
-    //     <span className="nav__works">How it Works</span>
-    //       {/* <div onClick={handleAuthentication} className=""> */}
-    //       {userData.user ? <button onClick={logout}>LogOut</button>: <button>SignIn</button>}
-
-    //       {/* </div> */}
-    //   </div>
-    //     </Link>
-
-    // </div>
 
     <div className="header">
-      <div className="header_container ">
-        <Link to="/">
-          <div className="header__logo">
-            <img src={evangadiLogo} alt="" />
-          </div>
-        </Link>
-        <div className="header__titles">
-          <div className="header__home">
-            <Link to="/"> Home</Link>
-          </div>
-          <div className="header__how">
-            <Link to=""> How it works</Link>
-          </div>
-
-          {userData.user ? (
-            <button className="signInBtn" onClick={logout}>
+    <Navbar collapseOnSelect expand="lg" bg="white" variant="light" >
+    <Container>
+      <Navbar.Brand >
+        <Link to="/"> 
+      <img
+        className="nav__image"
+        src={logo}
+        alt=""
+      />
+      </Link>
+      </Navbar.Brand>
+      <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+      <Navbar.Collapse id="responsive-navbar-nav">
+      
+        <Nav className="me-auto mx-5 nav__bar">
+          <Nav.Link href="#" className="navigate"><span >Home</span></Nav.Link>
+          <Nav.Link href="#" className="navigate"><span className="nav__works">How it works </span ></Nav.Link>
+          <span className="button">
+          <Link to={!userData.user && "/login"} className="link">
+          {userData.user ? (<button className="signInBtn" onClick={logout}>
               LogOut
             </button>
           ) : (
             <button className="signInBtn">SignIn</button>
+           
           )}
-        </div>
-      </div>
-    </div>
+           </Link></span>
+        </Nav>
+      </Navbar.Collapse>
+    </Container>
+  </Navbar>
+  </div>
   );
 };
 

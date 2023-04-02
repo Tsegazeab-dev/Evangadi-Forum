@@ -40,11 +40,19 @@ h5 {
 }
  */
 
+ .home__welcome h6{
+  font-size: 18px;
+ }
+ .home__user{
+  font-size: 15px;
+  font-weight: 600;
+ }
 .home__qbtn button{
-    background-color: blue;
+    background-color: #516cf0;
     border-radius: 7px;
     border: none;
     width: 150px;
+    font-size: 14px;
 }
 .home__container {
     width: 100%; 
@@ -63,7 +71,7 @@ h5 {
 .logoutBtn{
 align-items: center;
 margin: auto;
-background-color: blue;
+background-color: #516cf0;
 border-radius: 7px;
 color: white;
 width: 150px;
@@ -75,11 +83,13 @@ width: 150px;
 }
 .home__question {
   padding-top: 25px;
-  padding-left: 25px;
+  padding-left: 55px;
   padding-right: 10px;
-  width: 330px;
+  width: 450px;
+  font-size: 18px;
+  font-weight: 600;
 }
 .home__questionsArrow {
-margin-left: 65%;
+margin-left: 50%;
 }
 

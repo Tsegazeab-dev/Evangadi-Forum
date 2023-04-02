@@ -4,6 +4,6 @@ const router = require('express').Router();
 
 router.post('/', createQuestion);
 router.get('/', getAllquestions);
-router.post('/id', getQuestion)
+router.post('/id', getQuestion);
 
 module.exports = router;

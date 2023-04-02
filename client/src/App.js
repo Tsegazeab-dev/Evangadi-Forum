@@ -23,7 +23,7 @@ function App() {
       token = "";
     } else {
       //if token exists in localStorage then send request to auth to verify token and get user info
-      const userRes = await axios.get("http://localhost:5000/api/users", {
+      const userRes = await axios.get("http://localhost:4000/api/users", {
         headers: { "x-auth-token": token },
       });
 
@@ -67,7 +67,6 @@ function App() {
                 <Header />
               <div className="bg"> 
                   <Login />
-                  <Footer/>
               </div>
               </div>
             }
@@ -77,7 +76,6 @@ function App() {
           <Header />
         <div className="bg"> 
                 <SignUp />
-                <Footer/>
         </div>
         </div>} 
               />
